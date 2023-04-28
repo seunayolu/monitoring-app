@@ -1,0 +1,24 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: EKS LIVE DEMO ROUTE-TABLE-ROUTES
+
+Resources:
+  EKSPubRoute:
+    Type: AWS::EC2::Route
+    Properties:
+      RouteTableId: rtb-0a659d93d268c69a0
+      DestinationCidrBlock: "0.0.0.0/0"
+      GatewayId: igw-06b935a1c114fb3e9
+    
+  EKSPrivRouteAZ1:
+    Type: AWS::EC2::Route
+    Properties:
+      RouteTableId: rtb-0c0cf3a3bdffaefcf
+      DestinationCidrBlock: "0.0.0.0/0"
+      GatewayId: nat-014bb1f5fc2289bc4
+    
+  EKSPrivRouteAZ2:
+    Type: AWS::EC2::Route
+    Properties:
+      RouteTableId: rtb-010820945a4bc459e
+      DestinationCidrBlock: "0.0.0.0/0"
+      GatewayId: nat-01aab348fe508cbad
