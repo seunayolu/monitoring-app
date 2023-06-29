@@ -7,4 +7,3 @@ plotly
 tenacity
 boto3
 kubernetes
-awscli
